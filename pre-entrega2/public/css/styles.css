@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --verde-1: #3bc14a;
+    --verde-2: #4da167;
+    --verde-3: #4e6e5d;
+    --gris-1: #cfcfcf;
+    --gris-2: #4d5057;
+}
+.flex{
+    display: flex;
+}
+.row-container{
+    flex-direction: row;
+    column-gap: 2rem;
+}
+.space-between{
+    justify-content: space-between;
+}
+.centered-y{
+    align-items: center;
+}
+.centered-x{
+    justify-content: center;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+
+nav{
+    padding: 1rem;
+    background-color: var(--verde-2);
+}
+nav ul li{
+    cursor: pointer;
+}
+nav img{
+    width: 12rem;
+}
+.tienda-titulo{
+    background-color: var(--verde-1);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--gris-2);
+}
+.product-catalog{
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    padding: 3rem;
+}
+.product-card{
+    max-width: 320px;
+    background-color: #cfcfcf;
+    color: var(--gris-2);
+    border: 1px solid var(--gris-2);
+    border-radius: 10px;
+    text-decoration: none;
+}
+.product-card .product-info{
+    padding: .5rem;
+}
+.product-info .product-name{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.product-info .product-price{
+    font-weight: 500;
+}
+.product-info .product-desc{
+    color: #6b6f79;
+}
+.product-info button{
+    background-color: var(--verde-1);
+    color: #fff;
+    font-weight: 600;
+    padding: .5rem;
+    border: 1px solid var(--gris-2);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.img-container{
+    width: 318px;
+    overflow: hidden;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    border-radius: 10px;
+}
+@media screen and (max-width: 580px){
+    nav.row-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li{
+        font-size: .9rem;
+    }
+}
